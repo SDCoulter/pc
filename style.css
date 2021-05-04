@@ -1,56 +1,125 @@
 html, body, p {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .container {
-  background-color: purple;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 1vw;
+  padding: 20px;
+  display: flex;
 }
 .data-entry {
-
 }
 .limits {
-  display: flex;
-  justify-content: flex-start;
+  background-color: #e6e6e6;
+  width: 350px;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+  border: 2px solid #404040;
+  border-bottom: 0;
 }
-#limits-labels-div {
-  display: inline-block;
-  background-color: red;
-  width: 10vw;
-  text-align: right;
-  padding: 1%;
-
-  min-width: 120px;
+#limit-header {
+  text-align: center;
+  color: #404040;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 .limit-label {
-  display: block;
-  padding: .5vw 0;
+  width: 100px;
+  text-align: right;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
   font-weight: bold;
-  font-size: 1.4em;
-}
-.limits-inputs-div {
-  display: inline-block;
-  background-color: blue;
-  width: 20vw;
-  padding: 1%;
-
-  min-width: 200px;
+  background-color: lightgray;
+  color: #404040;
 }
 .limit-input {
-  display: block;
-  padding: .4vw 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.number-input {
+  width: 200px;
+  border-radius: 5px;
+  border: 2px solid #404040;
+  background-color: white;
   text-align: center;
-  font-size: 1.4em;
-  width: inherit;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #404040;
 }
 
 .raw-values {
-  background-color: yellow;
+  display: inline-block;
+  background-color: #b0b0b0;
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #404040;
+  border-top: 0;
+  border-bottom: 0;
 }
+.raw-values-label {
+  width: auto;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+.raw-values-input {
+  border: 2px solid #404040;
+  text-align: center;
+  font-weight: bold;
+  font-size: .8em;
+  border-radius: 5px;
+  color: #404040;
+  resize: none;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.data-submit {
+  background-color: lightgray;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  width: 350px;
+  border: 2px solid #404040;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-button {
+
+}
+.submit-button:hover {
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  background-color: #404040;
+}
+
+
 .output {
-  background-color: green;
+ background-color: #e6e6e6;
+ width: 610px;
+ height: 1000px;
+ padding: 10px;
+ margin-left: 20px;
+ border: 2px solid black;
+ border-radius: 5px;
+}
+.output-stats-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.stats-label {
+  width: 200px;
+}
+.stat-output {
+  width: 300px;
 }

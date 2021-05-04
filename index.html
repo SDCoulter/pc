@@ -10,28 +10,76 @@
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    // What is it?
-    //UPPER LIMIT/NOM/LOWER INPUT
-    //paste of excel data - column of data (30 readings)
-    //button to run the
     <div class="container">
       <div class="data-entry">
         <div class="limits">
-          <div id="limits-labels-div">
-            <newtag class="limit-label">UPPER</newtag>
-            <newtag class="limit-label">NOMINAL</newtag>
-            <newtag class="limit-label">LOWER</newtag>
+          <div id="limit-header">
+            ENTER USL - NOM - USL
           </div>
-          <div class="limits-inputs-div">
-            <input type="text" name="upper" id="upper" class="limit-input" />
-            <input type="text" name="nominal" id="nominal" class="limit-input" />
-            <input type="text" name="upper" id="lower" class="limit-input" />
+          <div class="limit-input">
+            <label for="upper" class="limit-label">UPPER</label>
+            <input type="text" name="upper" id="upper" class="number-input" />
+          </div>
+          <div class="limit-input">
+            <label for="nominal" class="limit-label">NOMINAL</label>
+            <input type="text" name="nominal" id="nominal" class="number-input" />
+          </div>
+          <div class="limit-input">
+            <label for="lower" class="limit-label">LOWER</label>
+            <input type="text" name="lower" id="lower" class="number-input" />
           </div>
         </div>
+
         <div class="raw-values">
+          <label for="rawdata" class="limit-label raw-values-label">ENTER 30 DATAPOINTS - COPY FROM EXCEL COLUMN</label>
+          <div id="textarea-holder">
+            <textarea name="rawdata" rows="31" cols="5" class="raw-values-input"></textarea>
+          </div>
+        </div>
+
+        <div class="data-submit">
+          <input type="submit" class="number-input submit-button" value="SUBMIT"></input>
         </div>
       </div>
+
       <div class="output">
+        <div class="output-stats">
+          <div id="limit-header">
+            STATISTIC OUTPUT
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">AVERAGE</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">STANDARD DEVIATION</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">MAX</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">MIN</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cp</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cpk</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cpm</div>
+            <div class="number-input stat-output">--.-</div>
+          </div>
+        </div>
+
+        <div class="output-graphs">
+          // have a data distribution graph first
+        </div>
       </div>
     </div>
 
