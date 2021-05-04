@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Process Capability</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    // What is it?
+    //UPPER LIMIT/NOM/LOWER INPUT
+    //paste of excel data - column of data (30 readings)
+    //button to run the
+    <div class="container">
+      <div class="data-entry">
+        <div class="limits">
+          <div id="limits-labels-div">
+            <newtag class="limit-label">UPPER</newtag>
+            <newtag class="limit-label">NOMINAL</newtag>
+            <newtag class="limit-label">LOWER</newtag>
+          </div>
+          <div class="limits-inputs-div">
+            <input type="text" name="upper" id="upper" class="limit-input" />
+            <input type="text" name="nominal" id="nominal" class="limit-input" />
+            <input type="text" name="upper" id="lower" class="limit-input" />
+          </div>
+        </div>
+        <div class="raw-values">
+        </div>
+      </div>
+      <div class="output">
+      </div>
+    </div>
+
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="app.js"></script>
+  </body>
+</html>

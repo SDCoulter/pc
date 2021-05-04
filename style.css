@@ -1,0 +1,56 @@
+html, body, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-color: purple;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1vw;
+}
+.data-entry {
+
+}
+.limits {
+  display: flex;
+  justify-content: flex-start;
+}
+#limits-labels-div {
+  display: inline-block;
+  background-color: red;
+  width: 10vw;
+  text-align: right;
+  padding: 1%;
+
+  min-width: 120px;
+}
+.limit-label {
+  display: block;
+  padding: .5vw 0;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.limits-inputs-div {
+  display: inline-block;
+  background-color: blue;
+  width: 20vw;
+  padding: 1%;
+
+  min-width: 200px;
+}
+.limit-input {
+  display: block;
+  padding: .4vw 0;
+  text-align: center;
+  font-size: 1.4em;
+  width: inherit;
+}
+
+.raw-values {
+  background-color: yellow;
+}
+.output {
+  background-color: green;
+}
