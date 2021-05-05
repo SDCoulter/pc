@@ -13,67 +13,90 @@
     <div class="container">
       <div class="data-entry">
         <div class="limits">
-          <div id="limit-header">
+          <div class="limit-header">
             ENTER USL - NOM - USL
           </div>
           <div class="limit-input">
             <label for="upper" class="limit-label">UPPER</label>
-            <input type="text" name="upper" id="upper" class="number-input" />
+            <input type="text" name="upper" id="upper" class="number-input" value="48"/>
           </div>
           <div class="limit-input">
             <label for="nominal" class="limit-label">NOMINAL</label>
-            <input type="text" name="nominal" id="nominal" class="number-input" />
+            <input type="text" name="nominal" id="nominal" class="number-input" value="50"/>
           </div>
           <div class="limit-input">
             <label for="lower" class="limit-label">LOWER</label>
-            <input type="text" name="lower" id="lower" class="number-input" />
+            <input type="text" name="lower" id="lower" class="number-input" value="52"/>
           </div>
         </div>
 
         <div class="raw-values">
           <label for="rawdata" class="limit-label raw-values-label">ENTER 30 DATAPOINTS - COPY FROM EXCEL COLUMN</label>
           <div id="textarea-holder">
-            <textarea name="rawdata" rows="31" cols="5" class="raw-values-input"></textarea>
+            <textarea name="rawdata" id="rawdata" rows="31" cols="5" class="raw-values-input"></textarea>
           </div>
         </div>
 
         <div class="data-submit">
-          <input type="submit" class="number-input submit-button" value="SUBMIT"></input>
+          <input type="submit" class="number-input submit-button" value="SUBMIT" onclick="processData()"></input>
         </div>
       </div>
 
       <div class="output">
         <div class="output-stats">
-          <div id="limit-header">
+          <div class="limit-header">
             STATISTIC OUTPUT
+          </div>
+          <div id="error-message">
+
           </div>
           <div class="output-stats-row">
             <div class="limit-label stats-label">AVERAGE</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="number-input stat-output" name="average">--.-</div>
           </div>
           <div class="output-stats-row">
             <div class="limit-label stats-label">STANDARD DEVIATION</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="number-input stat-output" name="stdev">--.-</div>
           </div>
           <div class="output-stats-row">
             <div class="limit-label stats-label">MAX</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="number-input stat-output" name="max">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">MEDIAN</div>
+            <div class="number-input stat-output" name="median">--.-</div>
           </div>
           <div class="output-stats-row">
             <div class="limit-label stats-label">MIN</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="number-input stat-output" name="min">--.-</div>
           </div>
           <div class="output-stats-row">
-            <div class="limit-label stats-label">Cp</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="limit-label stats-label">RANGE</div>
+            <div class="number-input stat-output" name="range">--.-</div>
           </div>
           <div class="output-stats-row">
             <div class="limit-label stats-label">Cpk</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="number-input stat-output" name="cpk">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cr</div>
+            <div class="number-input stat-output" name="cr">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cp</div>
+            <div class="number-input stat-output" name="cp">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cpu</div>
+            <div class="number-input stat-output" name="cpu">--.-</div>
+          </div>
+          <div class="output-stats-row">
+            <div class="limit-label stats-label">Cpl</div>
+            <div class="number-input stat-output" name="cpl">--.-</div>
           </div>
           <div class="output-stats-row">
             <div class="limit-label stats-label">Cpm</div>
-            <div class="number-input stat-output">--.-</div>
+            <div class="number-input stat-output" name="cpm">--.-</div>
           </div>
         </div>
 
