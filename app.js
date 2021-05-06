@@ -18,7 +18,7 @@ function processData() {
   if (d3.select("#error-message").text() == "" && rawData.length > 1 && limits.length == 3) {
     console.log("good to go");
   } else {
-    d3.select("#error-message").text("boobies");
+    d3.select("#error-message").text("error here");
   };
 
   /*
@@ -84,7 +84,7 @@ function checkLimits(lims) {
       break;
     };
   };
-  // Check order is correct.
+  // Check order is correct. - could be (!(arr[0]<arr[1] & arr[1]< arr[2]))?
   if (arr[1] < arr[0] || arr[2] < arr[1] || arr[2] < arr[0] || arr[0] > arr[1]) {
     d3.select("#error-message").text("THE ENTERED LIMITS ARE NOT VALID");
   };
