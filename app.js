@@ -14,11 +14,8 @@ function processData() {
   validateRaw(rawData, limits[0], limits[2]);
 
   // Only run the rest of the analysis if there is no error.
-  console.log(d3.select("#error-message").text())
   if (d3.select("#error-message").text() == "" && rawData.length > 1 && limits.length == 3) {
     console.log("good to go");
-  } else {
-    d3.select("#error-message").text("error here");
   };
 
   /*
@@ -84,8 +81,8 @@ function checkLimits(lims) {
       break;
     };
   };
-  // Check order is correct. - could be (!(arr[0]<arr[1] & arr[1]< arr[2]))?
-  if (arr[1] < arr[0] || arr[2] < arr[1] || arr[2] < arr[0] || arr[0] > arr[1]) {
+  // Check order is correct.
+  if (!(arr[2] < arr[1] & arr[1] < arr[0])) {
     d3.select("#error-message").text("THE ENTERED LIMITS ARE NOT VALID");
   };
   return arr;
@@ -96,8 +93,6 @@ function validateRaw(rd, u, l) {
   // Check none of the raw data is outside the limits.
   for (let i in rd) {
     if (rd[i] > u || rd[i] < l) {
-      console.log(rd[i], u);
-      console.log(rd[i], l);
       d3.select("#error-message").text("THE ENTERED DATA ARE NOT VALID");
       break;
     };
