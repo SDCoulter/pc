@@ -15,27 +15,26 @@ function processData() {
 
   // Only run the rest of the analysis if there is no error.
   if (d3.select("#error-message").text() == "" && rawData.length > 1 && limits.length == 3) {
-    console.log("good to go");
-  };
-
-  /*
-  // Store all data in Object - run functions if required.
-  var data = {
-    average: getAverage(),
-    stdev: getStdev(),
-    max:
-    median:
-    min:
-    range:
-    cpk: getCpk(),
-    cr: getCr(),
-    cp: getCp(),
-    cpu: getCpu(),
-    cpl: getCpl(),
-    cpm: getCpm()
-  };
-  // Then populate the values of the divs with the matching names.
-  */
+    console.log("Data Validation Passed");
+    /*
+    // Store all data in Object - run functions if required.
+    var data = {
+      average: getAverage(),
+      stdev: getStdev(),
+      max:
+      median:
+      min:
+      range:
+      cpk: getCpk(),
+      cr: getCr(),
+      cp: getCp(),
+      cpu: getCpu(),
+      cpl: getCpl(),
+      cpm: getCpm()
+    };
+    // Then populate the values of the divs with the matching names.
+    */
+  };  
 };
 
 
