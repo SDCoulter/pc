@@ -33,9 +33,15 @@ function cleanRaw(rd) {
     var rawD = rd;
 
     // Remove last item if empty string.
+    // Do we need this if we're separating by all whitespace? OBSOLETE?
     if (rawD[rawD.length-1] == "") {
       rawD.pop();
     };
+    // Check more than one value entered.
+    if (rawD.length < 2) {
+      d3.select("#error-message").text("PLEASE ENTER MORE THAN ONE VALUE");
+    };
+
     // Turn rawData to integers.
     rawD = rawD.map((val) => parseFloat(val));
 
@@ -43,7 +49,7 @@ function cleanRaw(rd) {
     for (var i in rawD) {
       var value = rawD[i];
       if (typeof value != "number" || value != value) {
-        d3.select("#error-message").text("THE ENTERED RAW DATA IS NOT VALID");
+        d3.select("#error-message").text("THE ENTERED RAW DATA CONTAINS NON-NUMBERS");
         break;
       };
     };
@@ -64,13 +70,13 @@ function checkLimits(lims) {
   for (var i in arr) {
     var value = arr[i];
     if (typeof value != "number" || value != value) {
-      d3.select("#error-message").text("THE ENTERED LIMITS ARE NOT VALID");
+      d3.select("#error-message").text("THE ENTERED LIMITS CONTAIN NON-NUMBERS");
       break;
     };
   };
   // Check order is correct.
   if (!(arr[2] < arr[1] & arr[1] < arr[0])) {
-    d3.select("#error-message").text("THE ENTERED LIMITS ARE NOT VALID");
+    d3.select("#error-message").text("LIMIT TEST FAILURE - LOWER < NOMINAL < UPPER IS FALSE");
   };
   return arr;
 };
@@ -80,7 +86,7 @@ function validateRaw(rd, u, l) {
   // Check none of the raw data is outside the limits.
   for (let i in rd) {
     if (rd[i] > u || rd[i] < l) {
-      d3.select("#error-message").text("THE ENTERED DATA ARE NOT VALID");
+      d3.select("#error-message").text("THE ENTERED DATA CONTAINS VALUES OUTSIDE THE LIMITS");
       break;
     };
   };
@@ -143,8 +149,6 @@ function getCpm() {
 
 };
 // Data functions end here.
-
-
 
 
 function populateFields(data) {
